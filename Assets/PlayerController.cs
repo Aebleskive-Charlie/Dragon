@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+
+
     [Header("Horizontal Movement Settings")]
     [SerializeField] private float walkSpeed = 1;
     
@@ -17,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float xAxis;
     private float xScale;
+    Animator anim;
 
     public static PlayerController Instance;
 
@@ -33,12 +37,12 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         xScale = transform.localScale.x;
+
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -70,6 +74,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         rb.velocity = new Vector2(walkSpeed * xAxis, rb.velocity.y);
+        anim.SetBool("IsWalking", rb.velocity.x != 0 && Grounded());
     }
 
     public bool Grounded()

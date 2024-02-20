@@ -1,0 +1,56 @@
+{
+    "name": "playerinputs",
+    "maps": [
+        {
+            "name": "ingame",
+            "id": "13a95c82-a4e1-46cb-99a9-ceed34751930",
+            "actions": [
+                {
+                    "name": "movement",
+                    "type": "Value",
+                    "id": "b2202a9e-289d-4b39-8f28-2ebec9a43e20",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "f3f25644-adcd-4b33-9b89-94f0de2d7868",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "4d588892-5019-4977-8607-6be680c466e7",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "498e5461-e124-4482-bdab-3f8bfa27491e",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
