@@ -19,7 +19,8 @@ public class GravityController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             rb.gravityScale *= -1;
-
+        
+            transform.localScale = new Vector2 (transform.localScale.x, transform.localScale.y * -1);
         }
     }
 }

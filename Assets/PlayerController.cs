@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     public bool Grounded()
     {
-        if (Physics2D.Raycast(GroundCheck.position, Vector2.down, GroundCheckY, whatIsGround)
+        if (Physics2D.Raycast(GroundCheck.position, Vector2.down * transform.localScale.y, GroundCheckY, whatIsGround)
              || Physics2D.Raycast(GroundCheck.position + new Vector3(GroundCheckX, 0, 0), Vector2.down, GroundCheckY, whatIsGround)
              || Physics2D.Raycast(GroundCheck.position + new Vector3(-GroundCheckX, 0, 0), Vector2.down, GroundCheckY, whatIsGround))
         {
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && Grounded())
         {
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce * transform.localScale.y);
         }
     }
 
