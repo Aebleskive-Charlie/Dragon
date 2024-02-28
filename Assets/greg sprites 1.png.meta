@@ -155,8 +155,8 @@ TextureImporter:
       name: greg sprites 1_2
       rect:
         serializedVersion: 2
-        x: 130
-        y: 5
+        x: 128
+        y: 7
         width: 64
         height: 35
       alignment: 9
